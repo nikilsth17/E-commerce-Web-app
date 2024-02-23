@@ -61,7 +61,7 @@ const Cart = () => {
           <Grid
           container
           sx={{
-            marginTop:"40px",
+            marginTop:"90px",
             display: "flex",
             flexDirection: {
               xs: "column",

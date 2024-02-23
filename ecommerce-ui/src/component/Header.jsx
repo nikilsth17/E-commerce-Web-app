@@ -77,9 +77,18 @@ const cardItemCount= data?.data?.count;
       <Divider />
       <List>
         {navItems.map((item) => (
+          
           <ListItem key={item.id} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item.name} />
+            <NavLink to={item.path}
+                    className={({ isActive }) =>
+                    isActive ? "navlink-active" : "navlink-pending"
+                  }
+                >
+                  <Typography sx={{color:pathname===`${item.path}`?"green":"black",textDecoration:"none"}}>
+                    {item.name}
+                  </Typography> 
+                </NavLink>
             </ListItemButton>
           </ListItem>
         ))}
@@ -90,7 +99,7 @@ const cardItemCount= data?.data?.count;
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex'  }}>
+    <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar component="nav"
       sx={{
@@ -100,9 +109,9 @@ const cardItemCount= data?.data?.count;
         
       
       }}>
-        <Toolbar>
+        <Toolbar sx={{display:"flex",flexDirection:"center",spacing:4}}>
           <IconButton
-            color="inherit"
+            color="black"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
@@ -113,11 +122,11 @@ const cardItemCount= data?.data?.count;
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' },color:"black" }}
+            sx={{ flexGrow: 0.3,justifyContent:"center" ,display: { xs: 'none', sm: 'flex' },color:"black"}}
           >
             NepMart
           </Typography>
-          <Box sx={{ display: { xs: '0', sm: '5rem' } }}>
+          <Box sx={{ flexGrow:0.7,display: { xs: 'none', sm: "flex"},justifyContent:"center",alignItems:"center"}}>
             {navItems.map((item) => (
               <Button key={item.id} sx={{ color: '#0f0f0f',textDecoration:"none"}}>
                 <NavLink to={item.path}
@@ -135,10 +144,13 @@ const cardItemCount= data?.data?.count;
           </Box>
 
 
-          <Stack direction="row"
+          <Stack 
+          flexGrow={{xs:1,sm:0}}
+          direction="row"
             justifyContent="center"
             alignItems="center"
-            spacing={2}
+            spacing={4}
+           
  
           >
             {!isSeller() && ( 
@@ -157,9 +169,10 @@ const cardItemCount= data?.data?.count;
               {getUserShortName()}
               
             </Avatar>
+            <LogoutDialog/>
           </Stack>
 
-          <LogoutDialog/>
+         
         </Toolbar>
       </AppBar>
       <nav>

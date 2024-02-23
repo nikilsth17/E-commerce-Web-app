@@ -18,6 +18,7 @@ const Login = () => {
       justifyContent: "center",
       alignItems: "center",
       gap: "1rem",
+  
     }}>
       <Typography variant="h4" sx={{color:"black"}}>
         Login

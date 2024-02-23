@@ -8,7 +8,7 @@ import Progress from '../component/Progress';
 import ProductCard from '../component/ProductCard';
 import {getRandomId} from "../utilis/randomIdGenerate.js";
 import { isSeller } from '../utilis/user.role';
-
+import background from "../assets/image.avif";
 
 const Home = () => {
   const dispatch= useDispatch();
@@ -32,7 +32,7 @@ const Home = () => {
 
   return (
   
-    <Box sx={{mt:"5rem"}}>
+    <Box sx={{backgroundImage:`url(${background})`,backgroundRepeat: "no-repeat",WebkitBackgroundSize:"100vw 100vh"  }}>
       <h2 style={{
           display:"flex",
           justifyContent:"center",
