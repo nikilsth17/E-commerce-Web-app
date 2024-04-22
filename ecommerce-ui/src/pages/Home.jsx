@@ -1,4 +1,4 @@
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import React from 'react'
 import { useQuery } from 'react-query';
 import { useDispatch } from 'react-redux'
@@ -9,6 +9,7 @@ import ProductCard from '../component/ProductCard';
 import {getRandomId} from "../utilis/randomIdGenerate.js";
 import { isSeller } from '../utilis/user.role';
 import background from "../assets/image.avif";
+import Categories from '../component/Categories.jsx';
 
 const Home = () => {
   const dispatch= useDispatch();
@@ -41,6 +42,9 @@ const Home = () => {
         }}>
           Welcome to home
       </h2>
+      <Typography variant='h5'>Categories</Typography>
+
+      <Categories/>
       <h2>New Arrivals</h2>
 
       <Box 
