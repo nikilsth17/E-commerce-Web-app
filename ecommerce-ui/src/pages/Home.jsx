@@ -8,8 +8,9 @@ import Progress from '../component/Progress';
 import ProductCard from '../component/ProductCard';
 import {getRandomId} from "../utilis/randomIdGenerate.js";
 import { isSeller } from '../utilis/user.role';
-import background from "../assets/image.avif";
 import Categories from '../component/Categories.jsx';
+import HomeSlider from '../component/HomeSlider.jsx';
+import Headers from '../component/Headers.jsx';
 
 const Home = () => {
   const dispatch= useDispatch();
@@ -32,8 +33,8 @@ const Home = () => {
 
 
   return (
-  
-    <Box sx={{backgroundImage:`url(${background})`,backgroundRepeat: "no-repeat",WebkitBackgroundSize:"100vw 100vh"  }}>
+  <>
+  <Box>
       <h2 style={{
           display:"flex",
           justifyContent:"center",
@@ -42,6 +43,7 @@ const Home = () => {
         }}>
           Welcome to home
       </h2>
+
       <Typography variant='h5'>Categories</Typography>
 
       <Categories/>
@@ -65,6 +67,8 @@ const Home = () => {
       </Box>
      
     </Box>
+  </>
+    
 
   )
 }
