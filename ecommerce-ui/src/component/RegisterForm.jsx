@@ -36,15 +36,6 @@ const RegisterForm = () => {
       navigate("/login");
     },
   })
-    // const registerUser=async(values)=>{
-    //     const newUser= values;
-    //     delete newUser.confirmPassword;
-    //     const res= await axios.post("http://localhost:5000/user/register",newUser);
-    //     setMessage(res.data.message);
-
-    //     console.log(res.data);
-    // };
-
   return (
     <>
       {isLoading && <Typography>Registering......</Typography>}

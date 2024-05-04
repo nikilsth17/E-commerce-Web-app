@@ -35,12 +35,12 @@ const Categories = () => {
 
       {category?.map((category) => {
         return (
-          <Card key={getRandomId()} sx={{ width: 180, height: 200 }}>
+          <Card key={getRandomId()} sx={{ width:{xs:200,md:180,lg:180}, height: {xs:225,md:200,lg:200} }}>
             <CardContent>
             <img
                 src={category.image}
                 alt={category.name}
-                style={{ maxWidth: "100%", height: "20vh", marginBottom: 10 }}
+                style={{width: "100%", height: "20vh", }}
               />
               <Typography
                 sx={{ fontSize: 14 }}

@@ -66,9 +66,6 @@ const LoginForm = () => {
             {formik.touched.email && formik.errors.email ? (
               <div className="error-message">{formik.errors.email}</div>
             ) : null}         
-        {/* <TextField label="Password" {...formik.getFieldProps("password")} />
-           */}
-
 
         <FormControl variant="outlined">
             <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>

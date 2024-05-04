@@ -48,7 +48,7 @@ const HeroSection = () => {
               Find the new collection in this <br />
               winter Season
             </Box>
-            <button>Discover Now</button>
+            <button className="hero-button">Discover Now</button>
           </Typography>
 
           <img src={nike}></img>
@@ -75,7 +75,7 @@ const HeroSection = () => {
               Find the new collection in this <br />
               winter Season
             </Box>
-            <button>Discover Now</button>
+            <button className="hero-button">Discover Now</button>
           </Typography>
 
           <img src={nike}></img>
@@ -103,7 +103,7 @@ const HeroSection = () => {
               Find the new collection in this <br />
               winter Season
             </Box>
-            <button>Discover Now</button>
+            <button className="hero-button">Discover Now</button>
           </Typography>
           <img src={nike}></img>
         </div>
@@ -129,7 +129,7 @@ const HeroSection = () => {
               Find the new collection in this <br />
               winter Season
             </Box>
-            <button>Discover Now</button>
+            <button className="hero-button">Discover Now</button>
           </Typography>
           
           <img src={nike}></img>
