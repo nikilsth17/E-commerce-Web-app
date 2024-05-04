@@ -1,12 +1,13 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+// import { Outlet } from 'react-router-dom'
 import CustomSnackbar from '../component/CustomSnackbar'
+import Login from '../pages/Login'
 
 const MinimumLayout = () => {
   return (
     <>
     <CustomSnackbar/>
-        <Outlet/>
+        <Login/>
     </>
   )
 }
