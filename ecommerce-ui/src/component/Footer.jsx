@@ -11,8 +11,8 @@ import { CiFacebook } from "react-icons/ci";
 const Footer = () => {
   return (
     <div className="footer">
-      <Grid container spacing={4} padding={5}>
-        <Grid item xs={6} md={4}>
+      <Grid container spacing={4} padding={{xs:2,md:5,lg:5}}>
+        <Grid item xs={12} md={4}>
           <Typography>NepMart</Typography>
           <Typography>
             Far far away, behind the word mountains, far from the countries
@@ -51,9 +51,9 @@ const Footer = () => {
             <li>Contact Us</li>
           </ul>
         </Grid>
-        <Grid item xs={6} md={4}>
+        <Grid item xs={12} md={4}>
           <h3>HAVE A QUESTIONS?</h3>
-          <Box>
+          <Box sx={{justifyContent:"center",alignItems:"center"}}>
             <Box sx={{ display: "flex", flexDirection: "row", gap: 2 }}>
               <SlLocationPin size={24} />
               <Typography sx={{ alignItems: "center", textAlign: "left" }}>
@@ -89,7 +89,7 @@ const Footer = () => {
           </Box>
         </Grid>
       </Grid>
-      <Grid>
+      <Grid sx={{display:"flex",textAlign:"center",alignItems:"center",justifyContent:"center"}}>
         <Typography variant="h6" sx={{ color: "#CCCCCC" }}>
           Copyright &copy; 2023 Nepmart | This template is made by Nikil
           Shrestha

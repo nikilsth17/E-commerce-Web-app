@@ -19,7 +19,6 @@ const Product = () => {
     const useHasAppliedFilter= minPrice>0 || maxPrice>0 || category.length>0;
   return (
     <Box sx={{
-      mt:"2rem",
       padding: {
         xs: "3rem",
         sm: "3rem",

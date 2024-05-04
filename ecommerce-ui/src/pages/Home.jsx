@@ -9,8 +9,6 @@ import ProductCard from '../component/ProductCard';
 import {getRandomId} from "../utilis/randomIdGenerate.js";
 import { isSeller } from '../utilis/user.role';
 import Categories from '../component/Categories.jsx';
-import HomeSlider from '../component/HomeSlider.jsx';
-import Headers from '../component/Headers.jsx';
 
 const Home = () => {
   const dispatch= useDispatch();

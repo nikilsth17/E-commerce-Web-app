@@ -7,6 +7,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import { BiLogOut } from 'react-icons/bi';
 import { useNavigate } from 'react-router-dom';
+import { Box } from '@mui/material';
 
 const LogoutDialog=()=> {
   const [open, setOpen] = React.useState(false);
@@ -23,10 +24,10 @@ const LogoutDialog=()=> {
   };
 
   return (
-    <div>
-    <Button onClick={handleClickOpen}>
-        <BiLogOut size={30}/>
-    </Button>
+    <>
+    <Box onClick={handleClickOpen} sx={{width:30,cursor:"pointer"}}>
+        <BiLogOut size={26} color='white'/>
+    </Box>
 
       <Dialog
         fullScreen={fullScreen}
@@ -37,12 +38,6 @@ const LogoutDialog=()=> {
         <DialogTitle id="responsive-dialog-title">
           {"Do you want to logout?"}
         </DialogTitle>
-        {/* <DialogContent>
-          <DialogContentText>
-            Let Google help apps determine location. This means sending anonymous
-            location data to Google, even when no apps are running.
-          </DialogContentText>
-        </DialogContent> */}
         <DialogActions>
           <Button autoFocus onClick={handleClose}>
           No
@@ -55,7 +50,7 @@ const LogoutDialog=()=> {
           </Button>
         </DialogActions>
       </Dialog>
-    </div>
+    </>
   );
 }
 

@@ -1,32 +1,52 @@
 #root {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-body{
-  margin: 0;
-  padding: 0;
 }
 
-.error-message{
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+.error-message {
   color: red;
   text-align: left;
 }
-nav {
-  background-color:green;
+
+button {
+  width: 20vw;
+  padding: 5px;
+  background-color: #766D4C;
+  color: #fff;
+  border: 0;
+  font-size: 10px;
+  @media (min-width: 1280px) {
+    padding: 9px;
+    font-size: 15px;
+    width: 10vw;
+
+
+
+  }
 }
 
-.navlink-active {
-  color: green;
-  text-decoration: none;
-  font-size: 10rem;
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-.navlink-pending {
-  color: red;
-  font-size: 2rem;
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+a {
   text-decoration: none;
 }
+
 
 
 .footer {
@@ -34,7 +54,7 @@ nav {
   margin: 0;
   bottom: 0;
   width: 100%;
-  height: 70vh; /* Height of the footer */
+  height: auto; 
   background: #1E1E1E;
   display: flex;
   justify-content: center;
@@ -42,10 +62,18 @@ nav {
   flex-direction: column;
   color: #CCCCCC;
 }
-ul{
- list-style-type: none;
- padding: 0;
- margin: 0;
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .footer {
+    height: auto;
+  }
+}
+
+/* Media query for larger screens */
+@media (min-width: 1200px) {
+  .footer {
+    height: 70vh;
+  }
 }
 
 .product-description {
@@ -53,55 +81,150 @@ ul{
   min-width: 100%;
   max-width: 100%;
   max-height: 400px;
-  box-shadow:rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
 }
 
 
 
 
-button{
-  width: 10vw;
-  padding: 9px;
-  background-color: #766D4C;
-  color: #fff;
-  border:0;
-  font-size: 15px;
+
+
+
+
+/* .main {
+  padding: 20px 10px;
+} */
+/* swiper */
+
+
+.swiper {
+  width: 100%;
+  height: 40vh;
+
+  /* Responsive font sizes */
+  @media (min-width: 1280px) {
+    height: 89vh;
+  }
 }
 
-
-
-
-a {
-  text-decoration: none;
-}
-
-.navbar {
-  position: relative;
+.swiper-slide {
+  text-align: center;
+  background: #DECC84;
+  padding: 50px 0;
+  /* Center slide text vertically */
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  max-width: 1440px;
-  margin: auto;
-  padding: 20px 75px;
-  background-color: #fff;
-  z-index: 10;
 }
 
+.swiper-slide img {
+  padding: 10px;
+  display: block;
+  width: 35%;
+  height: 65%;
+}
+
+.arrival-typo {
+  width: fit-content;
+  background-color: #1E1E1E;
+  color: #DECC84;
+  padding: 5px;
+  text-transform: uppercase;
+  font-family: monospace;
+  letter-spacing: 6px;
+  font-size: 12px;
+}
+
+.h6-typo {
+  font-weight: medium;
+  font-size: 20px;
+}
+
+.h4-typo {
+  font-size: 15px;
+  font-weight: 200;
+
+  /* Responsive font sizes */
+  @media (min-width: 1280px) {
+    font-size: 35px;
+    font-weight: 200;
+  }
+}
+
+/* ==========  navbar portion =======================*/
 .navbar {
   position: relative;
   z-index: 999;
-  height: 62px;
+  height: 55px;
   width: 100%;
-  background-color: #ccc;
+  background: black;
 }
 
 .sticky-nav {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rebeccapurple;
+  background-color: #766D4C;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.navbar-typo {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
 }
 
-.main {
-  padding: 20px 10px;
+.navbar-typo * {
+  box-sizing: border-box;
+  transition: all .35s ease;
+}
+
+.navbar-typo li {
+  /* display: inline-block; */
+  padding: 0;
+}
+
+.navbar-typo a {
+  padding: .5em .8em;
+  color: whitesmoke;
+  position: relative;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.navbar-typo a::before,
+.navbar-typo a::after {
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all .35s ease;
+  opacity: 0;
+}
+
+.navbar-typo a::before {
+  content: '';
+  right: 0;
+  top: 0;
+  border-top: 3px solid #DECC84;
+  border-right: 3px solid #DECC84;
+  transform: translate(-100%, 50%);
+}
+
+.navbar-typo a:after {
+  content: '';
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid #DECC84;
+  border-left: 3px solid #DECC84;
+  transform: translate(100%, -50%)
+}
+
+.navbar-typo a:hover:before,
+.navbar-typo a:hover:after {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.navbar-typo a:hover {
+  color: #DECC84;
 }

@@ -16,7 +16,7 @@ const MainLayout = () => {
      {/* <Header/> */}
      {/* <Headers/> */}
      <FilterProduct/>
-     <Box sx={{minHeight:"90vh"}}>        
+     <Box >        
       <Outlet/>
     </Box>
         <Footer/>
