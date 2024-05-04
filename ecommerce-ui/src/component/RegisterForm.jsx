@@ -100,15 +100,15 @@ const RegisterForm = () => {
                 display: "flex",
                 flexDirection: "column",
                 gap: "1rem",
-                width: "100%",
+                width:{lg:"100%",xs :"90%"},
               }}
         >
             <TextField label="Email" {...formik.getFieldProps("email")} />
             {formik.touched.email && formik.errors.email ? (
               <div className="error-message">{formik.errors.email}</div>
             ) : null}
-
-            <TextField
+        <div style={{display:"flex",flexDirection:"row",gap:5}}>
+        <TextField
               label="First name"
               {...formik.getFieldProps("firstName")}
             />
@@ -123,6 +123,8 @@ const RegisterForm = () => {
             {formik.touched.lastName && formik.errors.lastName ? (
               <div className="error-message">{formik.errors.lastName}</div>
             ) : null}
+        </div>
+           
 
 
 
