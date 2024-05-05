@@ -131,7 +131,7 @@ const Navbar = () => {
       sx={{ textAlign: "center", color: "black" }}
     >
       <Typography variant="h6" sx={{ my: 2 }}>
-        NepMart
+        NepBazaar
       </Typography>
       <Divider />
       <List>
@@ -185,7 +185,7 @@ const Navbar = () => {
               color: "white",
             }}
           >
-            NepMart
+            NepBazaar
           </Typography>
           <Box
             sx={{
