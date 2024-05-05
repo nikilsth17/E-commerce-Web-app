@@ -13,8 +13,6 @@ const MainLayout = () => {
     <>
     <CustomSnackbar/>
     <Navbar/>
-     {/* <Header/> */}
-     {/* <Headers/> */}
      <FilterProduct/>
      <Box >        
       <Outlet/>
