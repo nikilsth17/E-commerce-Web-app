@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const $axios = axios.create({
-    baseURL: 'https://e-commerce-web-app-b9qv.onrender.com',
+    baseURL: 'https://e-commerce-web-app-8s7y.onrender.com',
     timeout: 5000,
   });
 
