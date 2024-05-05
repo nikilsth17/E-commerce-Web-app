@@ -44,7 +44,7 @@ const LogoutDialog=()=> {
           </Button>
           <Button variant='contained' onClick={()=>{
             localStorage.clear();
-            navigate("/login");
+            navigate("/");
           }} autoFocus>
             Yes
           </Button>

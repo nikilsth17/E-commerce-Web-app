@@ -7,7 +7,6 @@ import FilterProduct from '../component/FilterProduct'
 
 import Navbar from '../component/Navbar'
 
-//children routes
 const MainLayout = () => {
   return (
     <>

@@ -26,7 +26,7 @@ const Register = () => {
         Register
     </Typography>
         <RegisterForm/>
-    <Link to="/login">Already registered? Login</Link>
+    <Link to="/">Already registered? Login</Link>
     </Box>
   )
 }

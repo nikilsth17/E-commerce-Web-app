@@ -21,10 +21,10 @@ import { useQuery } from "react-query";
 import { $axios } from "../lib/axios";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { getUserShortName } from "../utilis/userShortName";
-import { deepOrange } from "@mui/material/colors";
 import LogoutDialog from "./LogoutDialog";
 import HeroSection from "./HeroSection";
 import { styled } from "@mui/material/styles";
+import logo from "../assets/logo.png"
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -175,18 +175,7 @@ const Navbar = () => {
           >
             <MenuIcon sx={{ color: "white" }} />
           </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{
-              flexGrow: 0.1,
-              justifyContent: "center",
-              display: { xs: "none", sm: "flex" },
-              color: "white",
-            }}
-          >
-            NepBazaar
-          </Typography>
+          <img src={logo} alt="Logo" className="Logo"/>
           <Box
             sx={{
               flexGrow: 0.9,

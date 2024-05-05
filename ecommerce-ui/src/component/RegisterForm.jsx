@@ -33,7 +33,7 @@ const RegisterForm = () => {
       return await $axios.post("/user/register", userData);
     },
     onSuccess:(res)=>{
-      navigate("/login");
+      navigate("/");
     },
   })
   return (

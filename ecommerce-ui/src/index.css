@@ -44,7 +44,10 @@ a {
   text-decoration: none;
 }
 
-
+.Logo{
+  height: 25px;
+  width: 13vw;
+}
 
 .footer {
   padding: 0;
