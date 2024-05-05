@@ -48,7 +48,7 @@ const Product = () => {
 
 
           {userRole==="buyer" && (
-            <>
+            <Box sx={{display:"flex",flexDirection:"row",gap:5}}>
               <Button 
                 variant='outlined' 
                 disabled={!useHasAppliedFilter} 
@@ -72,7 +72,7 @@ const Product = () => {
                 onClick={()=>dispatch(openProductFilter())}>
                   Filter
               </Button>
-            </>
+            </Box>
                 
           )}
 

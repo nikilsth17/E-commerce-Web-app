@@ -223,6 +223,12 @@ const Navbar = () => {
                 </NavLink>
               </Typography>
             ))}
+            
+          </Box>
+          
+          <Box
+            sx={{ display: "flex", gap:{xs:8,md:8,lg:3}  }}
+          >
             <Stack
               flexGrow={{ xs: 1, sm: 0 }}
               direction="row"
@@ -244,10 +250,6 @@ const Navbar = () => {
                 </div>
               )}
             </Stack>
-          </Box>
-          <Box
-            sx={{ display: "flex", gap:{xs:15,md:8,lg:3}  }}
-          >
             <StyledBadge
               overlap="circular"
               anchorOrigin={{ vertical: "bottom", horizontal: "right" }}

@@ -51,14 +51,20 @@ const ProductDetail = () => {
     }
   return (
     <Box sx={{
-        margin:"5rem 2rem 2rem 2rem",
-        display:"flex", 
-        flexDirection:"row",
-        minHeight:"600px", 
-        padding:"1rem",
-        boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"
-
-        }}
+        margin: {lg:"5rem 2rem 2rem 2rem",xs:"none"},
+        display: "flex",
+        flexDirection: "row",
+        minHeight: "600px",
+        padding: "1rem",
+        boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+        flexWrap: "wrap", 
+        "@media (min-width: 600px)": {
+            flexWrap: "nowrap", 
+        },
+        "@media (min-width: 960px)": {
+            flexWrap: "nowrap", 
+        }
+    }}
     >
         <Grid container sx={{
           
