@@ -15,10 +15,6 @@ app.use(userRoutes);
 app.use(productRoutes);
 app.use(cartRoutes);
 
-
-
-
-
 // create port 
 const port= process.env.PORT;
 
