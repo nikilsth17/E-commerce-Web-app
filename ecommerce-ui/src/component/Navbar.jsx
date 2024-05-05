@@ -175,10 +175,9 @@ const Navbar = () => {
           >
             <MenuIcon sx={{ color: "white" }} />
           </IconButton>
-          <img src={logo} alt="Logo" className="Logo"/>
           <Box
             sx={{
-              flexGrow: 0.9,
+              flexGrow: 0.5,
               display: { xs: "none", sm: "flex" },
               justifyContent: "center",
               alignItems: "center",
@@ -214,9 +213,13 @@ const Navbar = () => {
             ))}
             
           </Box>
-          
+          <Box sx={{display:"flex",flexGrow:{lg:"0.6",xs:"0.3"}}}>
+          <img src={logo} alt="Logo" className="Logo"/>
+
+          </Box>
+
           <Box
-            sx={{ display: "flex", gap:{xs:8,md:8,lg:3}  }}
+            sx={{ display: "flex", gap:{xs:2,md:8,lg:3}  }}
           >
             <Stack
               flexGrow={{ xs: 1, sm: 0 }}
