@@ -27,7 +27,6 @@ const Cart = () => {
       {!isLoading && cartData.length <1?(
                <Box
                sx={{
-                 mt: "5rem",
                  display: "grid",
                  placeItems: "center",
                  minHeight: "calc(100vh - 10rem)",
@@ -41,7 +40,7 @@ const Cart = () => {
                  sx={{
                    width: {
                      xs: "100%",
-                     sm: "30%",
+                     sm: "50%",
                    },
                    height: "20rem",
                    boxShadow:
@@ -61,7 +60,7 @@ const Cart = () => {
           <Grid
           container
           sx={{
-            marginTop:"90px",
+            marginTop:"10px",
             display: "flex",
             flexDirection: {
               xs: "column",

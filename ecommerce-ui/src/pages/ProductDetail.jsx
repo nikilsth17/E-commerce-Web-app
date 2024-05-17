@@ -51,10 +51,11 @@ const ProductDetail = () => {
     }
   return (
     <Box sx={{
-        margin: {lg:"5rem 2rem 2rem 2rem",xs:"none"},
+        margin: {lg:"2rem 2rem 2rem 5rem",xs:"none"},
         display: "flex",
         flexDirection: "row",
-        minHeight: "600px",
+        width:{lg:"85vw",xs:"none"},
+        minHeight: "300px",
         padding: "1rem",
         boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
         flexWrap: "wrap", 
@@ -67,9 +68,6 @@ const ProductDetail = () => {
     }}
     >
         <Grid container sx={{
-          
-            // boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
-
             display:"flex",
             justifyContent:"center",
             alignItems:"center"
@@ -83,16 +81,16 @@ const ProductDetail = () => {
 
         <Grid container sx={{display:"flex", flexDirection:"column", gap:"1rem"}}>
             <Grid item>
-            <Typography>Name:{productDetail?.name}</Typography>
+            <Typography><b>Name</b>: {productDetail?.name}</Typography>
             </Grid>
             <Grid item>
-            <Typography>Company:{productDetail?.company}</Typography>
+            <Typography><b>Company</b>: {productDetail?.company}</Typography>
             </Grid>
             <Grid item>
-            <Typography>Description:{productDetail?.description}</Typography>
+            <Typography><b>Description</b>: {productDetail?.description}</Typography>
             </Grid>
             <Grid item>
-            <Typography>Price: Rs{productDetail?.price}</Typography>
+            <Typography><b>Price</b>: Rs{productDetail?.price}</Typography>
             </Grid>
             <Grid item>
 
@@ -102,7 +100,7 @@ const ProductDetail = () => {
             justifyContent:"flex-start",
             alignItems:"center"
            }}>
-                <Typography>Category</Typography>      
+                <Typography><b>Category</b></Typography>      
             <Chip
                 label={productDetail?.category.toUpperCase()}
                 color="success"
@@ -112,7 +110,7 @@ const ProductDetail = () => {
           
         </Grid>
             <Grid item>
-            <Typography>Availability quantity:{productDetail?.quantity}</Typography>
+            <Typography><b>Availability quantity</b>: {productDetail?.quantity}</Typography>
             </Grid>
            <Grid item sx={{
             display: "flex",
@@ -120,7 +118,7 @@ const ProductDetail = () => {
             justifyContent: "flex-start",
             alignItems: "center",
           }}>
-            <Typography variant="h6">Free shipping</Typography>
+            <Typography variant="h6"><b>Free shipping</b></Typography>
             <Chip
             label={productDetail?.freeShipping ? "Yes" : "No"}
             color={productDetail?.freeShipping ? "success" : "error"}
